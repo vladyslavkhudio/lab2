@@ -1,0 +1,20 @@
+letter = input('Print your letter(A or B): ')
+text = []
+alphabet = 'abcdefghijklmnopqrstuvwxyzабвгґдеєжзиіїйклмнопрстуфхцчшщьюяABCDEFGHIJKLMNOPQRSTUVWXYZАБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯ'
+letter.lower()
+if letter == 'a' or letter == 'а':
+    text1 = input().split()
+    for x in text1:
+        if x not in text and len(x) > 2:
+             text.append(x)
+    text.sort()
+    for y in range(0, len(text)):
+        print(text[y])
+elif letter == 'b' or letter == 'б':
+    text2 = input().split()
+    for z in range(len(alphabet)):
+        number = 0
+        for i in text2:
+            number += i.count(alphabet[z])
+        if number > 0:
+            print(alphabet[z] + ' - ' + str(number))
